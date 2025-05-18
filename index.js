@@ -1,3 +1,5 @@
+
+//Question 1
 async function sendReminder(){
     return new Promise((resolve) => {
     setTimeout(()=>
@@ -94,12 +96,12 @@ async function sendReminder(){
     }
     
     function startCountdown(n) {
-        const intervalId = setInterval(async () => {
+        const interval = setInterval(async () => {
             console.log(n);
             n--;
             if (n < 0) {
-                clearInterval(intervalId);
-                const result = await launchProduct();
+                clearInterval(interval);
+                const finalResult = await launchProduct();
                 console.log(result);
             }
         }, 1000);
